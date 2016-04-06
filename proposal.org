@@ -2,9 +2,9 @@
 #+OPTIONS: creator:nil d:(not "LOGBOOK") date:nil e:t email:nil f:t inline:t
 #+OPTIONS: num:nil p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t timestamp:t
 #+OPTIONS: title:t toc:nil todo:t |:t
-#+TITLE: Transitioning Unidata to the Cloud
+#+TITLE: Atmospheric Science in the Cloud: Enabling Data-Proximate Science
 #+DATE: <2016-04-05 Tue>
-#+AUTHOR: Julien Chastang, Tom Yoksas, Ward Fisher
+#+AUTHOR: Julien Chastang (chastang@ucar.edu), Tom Yoksas, Ward Fisher
 #+EMAIL: chastang@ucar.edu
 #+LANGUAGE: en
 #+SELECT_TAGS: export
@@ -18,7 +18,7 @@
 #+LaTeX_CLASS_OPTIONS: [article,letterpaper,times,12pt,listings-bw,microtype]
 
 # latex margins
-#+LATEX_HEADER: \usepackage[margin=0.90in]{geometry}
+#+LATEX_HEADER: \usepackage[margin=0.75in]{geometry}
 
 # latex footnotes
 #+LATEX_HEADER: \usepackage{bigfoot}
@@ -41,7 +41,7 @@ The Unidata Program Center is funded primarily by the National Science Foundatio
 
 * Background
 
-Unidata's core community is atmospheric science departments in U.S. universities. To fulfill our mission of helping share geoscience data, over many years, Unidata has developed or promoted a number of data distribution software packages that our academic users leverage to access geoscience data vital to their teaching and scientific objectives.
+Unidata's core community is atmospheric science departments in U.S. universities. We also serve the broader, worldwide geoscientific public. To fulfill our mission of helping share geoscience data, over many years, Unidata has developed or promoted a number of data distribution software packages that our academic users leverage to access geoscience data vital to their teaching and scientific objectives.
 
   - The Local Data Manager (LDM) is a peer-to-peer data distribution technology well adapted to moving large geoscience datasets across computer networks.
   - THREDDS Data Server (TDS) provides metadata and data access for scientific datasets, using a variety of remote data access protocols including OPeNDAP.
@@ -77,6 +77,8 @@ To fulfill our objectives, we request the following resources:
 - 200,000 total compute hours 
 - 20 TB of storage
 - 30 "ExtraLarge" (Standard A4) instances (8 CPU core, 14 GB RAM, 605 GB of disk storage)
+
+In addition, instances attached to solid-state drives (SSDs) would be very welcome especially to experiment with the high volumes of data Unidata typically handles.
 
 * Appendix
 ** About Unidata 
