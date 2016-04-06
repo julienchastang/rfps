@@ -18,7 +18,7 @@
 #+LaTeX_CLASS_OPTIONS: [article,letterpaper,times,12pt,listings-bw,microtype]
 
 # latex margins
-#+LATEX_HEADER: \usepackage[margin=0.91in]{geometry}
+#+LATEX_HEADER: \usepackage[margin=0.90in]{geometry}
 
 # latex footnotes
 #+LATEX_HEADER: \usepackage{bigfoot}
@@ -28,7 +28,7 @@
 
 * Abstract
 
-The Unidata Program Center is primarily funded by the National Science Foundation to provide data services, tools, and cyberinfrastructure leadership that advance Earth system science, enhance educational opportunities, and broaden participation. With the goal of better serving our community and in fulfillment of objectives articulated in [[http://www.unidata.ucar.edu/publications/Unidata_2018.pdf][Unidata 2018: Transforming Geoscience through Innovative Data Services]], Unidata is investigating how its technologies can best take advantage of cloud computing. To this end, we are employing Docker container technology to streamline building, deploying, and running Unidata technology offerings in the cloud. Specifically, we have created Docker images for the RAMADDA, THREDDS, ADDE and the LDM. We propose deploying these containers on the Microsoft Azure cloud computing environment for distribution of real-time, high volume meteorological data.
+The Unidata Program Center is funded primarily by the National Science Foundation to provide data services, tools, and cyber-infrastructure leadership that advance Earth system science, enhance educational opportunities, and broaden participation. With the goal of better serving our community and in fulfillment of objectives articulated in *[[http://www.unidata.ucar.edu/publications/Unidata_2018.pdf][Unidata 2018: Transforming Geoscience through Innovative Data Services]]* Unidata is investigating how its technologies can best take advantage of cloud computing. To this end, we are employing Docker container technology to streamline building, deploying, and running Unidata technology offerings in the cloud. Specifically, we have created Docker images for the RAMADDA, THREDDS, ADDE and the LDM. We propose deploying these containers on the Microsoft Azure cloud computing environment for distribution of real-time, high volume meteorological data.
 
 * Internal Notes                                                   :noexport:
 
@@ -41,30 +41,30 @@ The Unidata Program Center is primarily funded by the National Science Foundatio
 
 * Background
 
-Unidata's core community is atmospheric science departments at US universities. To fulfill our mission of helping share geoscience data, over many years, Unidata has developed or promoted a number of data distribution software packages that our academic users leverage to access geoscience data vital to their teaching and scientific objectives.
+Unidata's core community is atmospheric science departments in U.S. universities. To fulfill our mission of helping share geoscience data, over many years, Unidata has developed or promoted a number of data distribution software packages that our academic users leverage to access geoscience data vital to their teaching and scientific objectives.
 
-  - The LDM or Local Data Manager is a peer-to-peer data transfer technology well adapted to moving large geoscience datasets across computer networks.
-  - THREDDS is a data server that provides metadata and data access for scientific datasets, using a variety of remote data access protocols including OPeNDAP.
-  - RAMADDA originally developed at Unidata and now maintained at Geode Systems is a content management system for geoscience data. It has excellent integration with the Unidata Integrated Data Viewer (IDV) visualization client.
-  - ADDE is a data serving technology from the University of Wisconsin well-suited for satellite, radar and other observational datasets.
+  - The Local Data Manager (LDM) is a peer-to-peer data distribution technology well adapted to moving large geoscience datasets across computer networks.
+  - THREDDS Data Server (TDS) provides metadata and data access for scientific datasets, using a variety of remote data access protocols including OPeNDAP.
+  - RAMADDA, originally developed at Unidata and now maintained at Geode Systems, is a content management system for geoscience data. It has excellent integration with the Unidata Integrated Data Viewer (IDV) visualization client.
+  - ADDE, the data serving component of McIDAS-X which is developed at the Space Science and Engineering Center at the University of Wisconsin at Madison, is well-suited for remote access to satellite, radar and other observational datasets.
 
-The LDM, THREDDS, RAMADDA and ADDE are proven, robust technologies that have been hardened over many years of use by our academic community, and the broader geoscience public. They are capable of distributing large amounts of forecast model output, climate datasets, satellite data, radar data, lightning data, upper-air data, textual weather bulletins, and many other geoscience data types.
+The LDM, TDS, RAMADDA and ADDE are proven, robust technologies that have been hardened over many years of use by the academic and broader geoscience communities. They are capable of distributing very large volumes of forecast model output, climate datasets, satellite and radar imagery, lightning, surface observational and upper-air data, textual weather bulletins, and many other geoscience data types typically in near real-time.
 
 * Research Problem
 
-Our academic partners are devoting fewer resources to in-house computing infrastructure and are looking to cloud computing for cost savings as well as to move away from the traditional computer lab settings and towards the modern reality of accessing and  processing information from any device at any time. With these trends in mind, Unidata software packages have been containerized with Docker cloud computing technology. Unidata has been experimenting with them in the Azure cloud through a previous Azure for Research Grant\cite{Chastang2016} whose resources have been largely consumed.
+Our academic partners are devoting fewer resources to in-house computing infrastructure and are looking to cloud computing for cost savings as well as to move away from the traditional computer lab setting and towards the modern reality of accessing and processing information from any device at any time. With these trends in mind, Unidata software packages have been containerized with Docker cloud computing technology. Unidata has been experimenting with them in the Azure cloud through a previous Azure for Research Grant\cite{Chastang2016} whose resources have been largely consumed.
 
-The purpose of this project is to improve the serving of real-time, high volume geoscience data from the Azure cloud with the LDM, THREDDS, RAMADDA and ADDE software packages. These data distribution and server-side technologies will serve data to a variety of proximate clients such as Jupyter Notebooks, Python applications, and cloud streaming IDV\cite{Fisher2015a} running in the cloud alongside the data. Meteorological data are becoming larger in terms of size and quantity of datasets.  It is therefore logical to ship code that operates on data rather than duplicating and moving large volumes of data across computer networks. Also, traditional desktop clients such as the IDV, McIDAS-X, and McIDAS-V will view data served from the Azure cloud through efficient remote access of data provided by THREDDS, ADDE and RAMADDA.
+The purpose of this project is to improve the serving of real-time, high volume geoscience data from the Azure cloud with the LDM, TDS, RAMADDA and ADDE software packages. These data distribution and server-side technologies will provide data to a variety of proximate clients such as Jupyter Notebooks, Python applications, and cloud streaming IDV\cite{Fisher2015a} running alongside the data. Meteorological data are becoming larger in terms of size and quantity of datasets. It is, therefore, logical to provide code that operates on data locally rather than duplicating and moving those data across computer networks. Also, traditional desktop clients such as the IDV, McIDAS-X, and McIDAS-V will be able to view data served from the Azure cloud through efficient remote access of data provided by TDS, ADDE and RAMADDA.
 
-Moreover, we aim to evolve our data proximate analysis and visualization tools, specifically in the Jupyter Notebook and Python applications arena. We will develop Jupyter Notebook and Python applications Docker containers that target data served through Unidata data distribution software to improve our data analysis and visualization capabilities in the cloud. We will also study accessing data on local networks within the Azure cloud to avoid the costs of moving data out of the cloud.
+Moreover, we aim to evolve our data proximate analysis and visualization tools, specifically in the Jupyter Notebook and Python applications arena. We will develop Jupyter Notebook and Python applications in Docker containers that target data served through Unidata data distribution software to improve our data analysis and visualization capabilities in the cloud. We will also study accessing data on local networks within the Azure cloud to avoid the costs of moving data out of the cloud.
 
-Finally, we wish to study scaling issues associated with extremely high volumes of data  we have observed that cannot keep pace on current Azure virtual machines (e.g., "ExtraLarge" instances).
+Finally, we wish to study scaling issues associated with extremely high volume data sets that we have observed to not be able to keep pace on current Azure virtual machines (e.g., "ExtraLarge" instances).
 
 These cloud computing capabilities will benefit the geoscience community by providing reliable access to geoscience data served through a variety of Unidata data serving technologies.
 
 * Plan for Azure
 
-We plan to continue improving our use of Docker container technology to deploy operational Unidata software infrastructure serving real-time, high volume geoscience data on Azure virtual machines. We specifically aim to use Docker, ~docker-compose~, and ~docker-machine~ technologies to quickly stage Unidata data servers. We will also benefit from Azure's out-of-the-box Docker and ~docker-machine~ support. These Docker technologies will be coupled with scripts that can deploy a fully capable Unidata server within minutes. These data servers will have approximately 80 gigabytes/day of geoscience data available to serve out to proximate and remote client applications.
+We plan to continue improving our use of Docker container technology to deploy Unidata software infrastructure to serve real-time, high volume geoscience data on Azure virtual machines. We specifically aim to use Docker, ~docker-compose~, and ~docker-machine~ technologies to quickly stage Unidata data server instances. We will also benefit from Azure's out-of-the-box Docker and ~docker-machine~ support. These Docker technologies will be coupled with scripts that can deploy a fully capable Unidata server instance within minutes. These data server instances will be evaluated on their ability to serve upwards of 500 gigabytes/day of geoscience data to serve out to proximate and remote client applications.
 
 In addition, we will undertake research and development efforts targeted towards developing Docker containers for client applications specifically in the Jupyter Notebook and Python applications arena. The objective here is to deploy these Docker containers on Azure virtual machines in a manner that is proximate to Unidata data servers in order to avoid shipping data out of the Azure cloud to avert performance and cost penalties.
 
