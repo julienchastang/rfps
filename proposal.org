@@ -28,7 +28,7 @@
 
 * Abstract
 
-The Unidata Program Center is funded primarily by the National Science Foundation to provide data services, tools, and cyber-infrastructure leadership that advance Earth system science, enhance educational opportunities, and broaden participation. With the goal of better serving our community and in fulfillment of objectives articulated in *[[http://www.unidata.ucar.edu/publications/Unidata_2018.pdf][Unidata 2018: Transforming Geoscience through Innovative Data Services]]* Unidata is investigating how its technologies can best take advantage of cloud computing. To this end, we are employing Docker container technology to streamline building, deploying, and running Unidata technology offerings in the cloud. Specifically, we have created Docker images for the RAMADDA, THREDDS, ADDE and the LDM. We propose deploying these containers on the Microsoft Azure cloud computing environment for distribution of real-time, high volume meteorological data.
+The Unidata Program Center is funded primarily by the National Science Foundation to provide data services, tools, and cyber-infrastructure leadership that advance Earth system science, enhance educational opportunities, and broaden participation. With the goal of better serving our community and in fulfillment of objectives articulated in *[[http://www.unidata.ucar.edu/publications/Unidata_2018.pdf][Unidata 2018: Transforming Geoscience through Innovative Data Services]]*, Unidata is investigating how its technologies can best take advantage of cloud computing. To this end, we are employing Docker container technology to streamline building, deploying, and running Unidata technology offerings in the cloud. Specifically, we have created Docker images for the RAMADDA, THREDDS, ADDE and the LDM. We propose deploying these containers on the Microsoft Azure cloud computing environment for distribution of real-time, high volume meteorological data.
 
 * Internal Notes                                                   :noexport:
 
@@ -68,7 +68,7 @@ We plan to continue improving our use of Docker container technology to deploy U
 
 In addition, we will undertake research and development efforts targeted towards developing Docker containers for client applications specifically in the Jupyter Notebook and Python applications arena. The objective here is to deploy these Docker containers on Azure virtual machines in a manner that is proximate to Unidata data servers in order to avoid shipping data out of the Azure cloud to avert performance and cost penalties.
 
-All computing infrastructure and code we develop including =Dockerfiles= and ~bash~ scripts will be open-source and available on the [[https://github.com/Unidata][Unidata github account]]. Moreover, Docker's emphasis on reproducible environments codified in ~Dockerfiles~ will mean that other groups can easily reuse or build upon our work in an open-source manner.
+All computing infrastructure and code we develop including =Dockerfiles= and ~bash~ scripts will be open-source and available on the  [[https://github.com/Unidata][Unidata github account]]. Moreover, Docker's emphasis on reproducible environments codified in =Dockerfiles= will mean that other groups can easily reuse or build upon our work in an open-source manner.
 
 * Resource Requirements 
 
